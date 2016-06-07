@@ -41,6 +41,10 @@ class Configuration implements ConfigurationInterface
             ->children()
                 ->booleanNode('statistics')->defaultTrue()->end();
 
+        $rootNode
+            ->children()
+            ->scalarNode('caller')->defaultValue("php")->end();
+
         $defaultOptionsNode = $rootNode
             ->children()
                 ->arrayNode('queue_options_defaults')
