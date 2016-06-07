@@ -48,5 +48,6 @@ class JMSJobQueueExtension extends Extension
 
         $container->setParameter('jms_job_queue.queue_options_defaults', $config['queue_options_defaults']);
         $container->setParameter('jms_job_queue.queue_options', $config['queue_options']);
+        $container->setParameter('jms_job_queue.caller', $config['caller']);
     }
 }
